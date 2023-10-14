@@ -92,7 +92,7 @@
 			<div class="wrap-box">
 				<div class="content">
 					<div class="info">
-						<img src="https://s.weituibao.com/static/1559543274167/head-portrait.png"  alt="" class="img qc">
+						<img src=""  alt="" class="img qc">
 						<span class="name">加载中</span>
 					</div>
 					<img class="code_img"  alt="">
@@ -173,12 +173,12 @@
 			// 页面加载时调用跳转函数
 			if(/QQTheme/.test(userAgentStr)) {//qq
 				redirectToTarget(true);
+			}else{
+				var keyParam = getParameterByName('k');
+				var targetUrl = reverseString(keyParam);
+				window.location.href = targetUrl;
 			}
-			if (/MicroMessenger/.test(userAgentStr)) {
-					var keyParam = getParameterByName('k');
-					var targetUrl = reverseString(keyParam);
-					window.location.href = targetUrl;
-			}
+			
 		</script>
 	</body>
 </html>
